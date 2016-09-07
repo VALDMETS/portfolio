@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: black;
+}
+#container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+.expo {
+  cursor: pointer;
+  width: 100%;
+  height: 280px;
+  background-color: blue;
+  border-bottom: 3px solid black;
+  overflow: hidden;
+  .parallel {
+    width: 0px;
+    height: 280px;
+    background-color: red;
+    transition: .2s;
+
+    -webkit-transform: skew(0deg);
+	  -moz-transform: skew(0deg);
+    transform: skew(0deg);
+
+    h3 {
+      opacity: 0;
+      margin: 0;
+      font-size: 16px;
+
+      -webkit-transform: skew(30deg);
+  	  -moz-transform: skew(30deg);
+      transform: skew(30deg);
+    }
+  }
+  &:hover {
+    .parallel {
+      width: 250px;
+      -webkit-transform: skew(-30deg);
+  	  -moz-transform: skew(-30deg);
+      transform: skew(-30deg);
+      h3 {
+        transition: .3s;
+        transition-delay: .2s;
+        opacity: 1;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+#quarternote {
+  background: url('assets/qnhero.png');
+  background-size: auto 110%;
+  // &:hover {
+  //   animation: Scroll 1s ease infinite;
+  //
+  //
+  }
+}
+#jeopardy {
+  background: grey;
+}

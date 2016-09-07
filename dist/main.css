@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: black; }
+  background: black;
+  font-family: sans-serif; }
 
 #container {
   margin: 0 auto;
@@ -10,11 +11,13 @@ body {
   max-width: 1400px; }
 
 .expo {
+  transition: .5s;
+  -webkit-filter: brightness(0.4);
   cursor: pointer;
+  margin: 12px auto;
   width: 100%;
   height: 280px;
   background-color: blue;
-  border-bottom: 3px solid black;
   overflow: hidden; }
   .expo .parallel {
     width: 0px;
@@ -24,30 +27,44 @@ body {
     -webkit-transform: skew(0deg);
     -moz-transform: skew(0deg);
     transform: skew(0deg); }
-    .expo .parallel h3 {
+    .expo .parallel h3, .expo .parallel p {
       color: white;
       opacity: 0;
       margin: 0;
-      font-size: 16px;
+      font-size: 18px;
       -webkit-transform: skew(30deg);
       -moz-transform: skew(30deg);
       transform: skew(30deg); }
-  .expo:hover .parallel {
-    width: 250px;
-    -webkit-transform: skew(-30deg);
-    -moz-transform: skew(-30deg);
-    transform: skew(-30deg);
-    box-shadow: 14px 0px rgba(0, 0, 0, 0.6), 28px 0px rgba(0, 0, 0, 0.3), 42px 0px rgba(0, 0, 0, 0.1); }
-    .expo:hover .parallel h3 {
-      transition: .3s;
-      transition-delay: .2s;
-      opacity: 1;
-      font-size: 16px; }
+    .expo .parallel p {
+      display: block;
+      width: 230px;
+      margin-left: 30px; }
+  .expo:hover {
+    -webkit-filter: brightness(1); }
+    .expo:hover .parallel {
+      width: 250px;
+      -webkit-transform: skew(-30deg);
+      -moz-transform: skew(-30deg);
+      transform: skew(-30deg);
+      box-shadow: 14px 0px rgba(0, 0, 0, 0.6), 28px 0px rgba(0, 0, 0, 0.3), 42px 0px rgba(0, 0, 0, 0.1); }
+      .expo:hover .parallel h3, .expo:hover .parallel p {
+        transition: .3s;
+        transition-delay: .2s;
+        opacity: 1; }
 
 #quarternote {
   background: url("assets/quarter.png");
   background-size: auto 100%;
   background-position: 0% 0%; }
+  #quarternote h3 {
+    padding: 10px 0 16px 20px;
+    font-family: 'Exo', sans-serif;
+    font-size: 50px;
+    text-shadow: 4px 4px #037171; }
+  #quarternote p {
+    font-family: 'Exo', sans-serif;
+    font-weight: 200;
+    font-style: italic; }
   #quarternote:hover {
     animation: Scroll 11s ease infinite alternate; }
 @keyframes Scroll {

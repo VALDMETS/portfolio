@@ -1,34 +1,69 @@
-/*
-Error: Invalid CSS after "  }": expected selector or at-rule, was "}"
-        on line 63 of app/scss/main.scss
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: black; }
 
-58:   // &:hover {
-59:   //   animation: Scroll 1s ease infinite;
-60:   //
-61:   //
-62:   }
-63: }
-64: #jeopardy {
-65:   background: grey;
-66: }
+#container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px; }
 
-Backtrace:
-app/scss/main.scss:63
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:391:in `run'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"  }\": expected selector or at-rule, was \"}\"\A         on line 63 of app/scss/main.scss\A \A 58:   // &:hover {\A 59:   //   animation: Scroll 1s ease infinite;\A 60:   //\A 61:   //\A 62:   }\A 63: }\A 64: #jeopardy {\A 65:   background: grey;\A 66: }"; }
+.expo {
+  cursor: pointer;
+  width: 100%;
+  height: 280px;
+  background-color: blue;
+  border-bottom: 3px solid black;
+  overflow: hidden; }
+  .expo .parallel {
+    width: 0px;
+    height: 280px;
+    background-color: black;
+    transition: .2s;
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    transform: skew(0deg); }
+    .expo .parallel h3 {
+      color: white;
+      opacity: 0;
+      margin: 0;
+      font-size: 16px;
+      -webkit-transform: skew(30deg);
+      -moz-transform: skew(30deg);
+      transform: skew(30deg); }
+  .expo:hover .parallel {
+    width: 250px;
+    -webkit-transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    transform: skew(-30deg);
+    box-shadow: 14px 0px rgba(0, 0, 0, 0.6), 28px 0px rgba(0, 0, 0, 0.3), 42px 0px rgba(0, 0, 0, 0.1); }
+    .expo:hover .parallel h3 {
+      transition: .3s;
+      transition-delay: .2s;
+      opacity: 1;
+      font-size: 16px; }
+
+#quarternote {
+  background: url("assets/quarter.png");
+  background-size: auto 100%;
+  background-position: 0% 0%; }
+  #quarternote:hover {
+    animation: Scroll 11s ease infinite alternate; }
+@keyframes Scroll {
+  0% {
+    background-position: 0px 0%; }
+  20% {
+    background-position: 600px 0%; }
+  40% {
+    background-position: 1200px 0%; }
+  60% {
+    background-position: 1800px 0%; }
+  80% {
+    background-position: 2400px 0%; }
+  100% {
+    background-position: 3000px 0%; } }
+#jeopardy {
+  background: grey; }
+
+/*# sourceMappingURL=main.css.map */

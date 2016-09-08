@@ -48,8 +48,12 @@ body {
     }
     p {
       display: block;
-      width: 230px;
+      width: 250px;
       margin-left: 30px;
+
+      font-family: 'Exo', sans-serif;
+      font-weight: 200;
+      font-style: italic;
     }
     .date {
       position: absolute;
@@ -84,11 +88,6 @@ body {
     font-size: 50px;
     text-shadow: 4px 4px #037171;
   }
-  p {
-    font-family: 'Exo', sans-serif;
-    font-weight: 200;
-    font-style: italic;
-  }
   &:hover {
     animation: Scroll 11s ease infinite alternate;
     @keyframes Scroll {
@@ -101,6 +100,49 @@ body {
     }
   }
 }
+#schlubbs {
+  background: url('assets/schlubbs.jpg');
+  background-size: 1200px auto;
+  border: 1px solid rgb(65, 102, 125);
+  .parallel {
+    background: rgba(65, 102,125, 1);
+  }
+  h3 {
+    padding: 4px 0 0 28px;
+    font-family: 'Pacifico', cursive;
+    font-size: 62px;
+    text-shadow: 0 0 20px #09E8E8;
+    color: #C1FFFF;
+    animation: Neon 2s ease infinite alternate;
+    @keyframes Neon {
+      0% {
+        text-shadow: 0 0 20px #09E8E8;
+        color: #C1FFFF;
+      }
+      60% {
+        text-shadow: 0 0 20px #09E8E8;
+        color: #C1FFFF;
+      }
+      100% {
+        text-shadow: 0 0 46px #09E8E8;
+        color: #DDFFFF;
+      }
+    }
+  }
+  &:hover {
+    animation: NorthScroll 9s ease infinite alternate;
+    @keyframes NorthScroll {
+      0%{background-position: 0% 0px;}
+      33%{background-position: 0% 360px;}
+      66%{background-position: 0% 720px;}
+      100%{background-position: 0% 1080px;}
+    }
+    .parallel {
+      box-shadow: 14px 0px rgba(65, 102, 125,.6), 28px 0px rgba(65, 102, 125,.3), 42px 0px rgba(65, 102, 125,.1);
+    }
+  }
+
+}
 #jeopardy {
   background: rgba(25, 65, 25, 1);
   border-top: 1px solid #1cd42d;
@@ -109,10 +151,10 @@ body {
     background-color: #1cd42d;
     h3 {
       width: 600px;
-      padding: 20px 0 10px 20px;
+      padding: 24px 0 10px 20px;
       font-family: 'Jeopardy', sans-serif;
-      letter-spacing: 3px;
-      font-size: 56px;
+      letter-spacing: 4px;
+      font-size: 62px;
       color: #2CE83E;
       text-shadow: 5px 5px 10px black;
     }
@@ -121,6 +163,43 @@ body {
     background: url('assets/jeop.gif');
     .parallel {
       box-shadow: 14px 0px rgba(28,212,45,.6), 28px 0px rgba(28,212,45,.3), 42px 0px rgba(28,212,45,.1);
+    }
+  }
+}
+#calculator {
+  background: url('assets/space.png');
+  background-size: 1200px auto;
+  border: 1px solid white;
+  h3 {
+    text-align: center;
+    font-size: 40px;
+    width: 400px;
+    padding: 8px 0 10px 0;
+    margin-left: -70px;
+    line-height: 38px;
+  }
+  &:hover {
+    -webkit-filter: brightness(1);
+    animation: Stars 3.6s ease infinite alternate;
+    @keyframes Stars {
+      0%{
+        -webkit-filter: brightness(.9);
+      }
+      30% {
+        -webkit-filter: brightness(1);
+      }
+      80% {
+        -webkit-filter: brightness(1.3);
+      }
+      90% {
+        -webkit-filter: brightness(3.2);
+      }
+      97% {
+        -webkit-filter: brightness(3.6);
+      }
+      100% {
+        -webkit-filter: brightness(2.1);
+      }
     }
   }
 }

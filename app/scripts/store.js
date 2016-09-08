@@ -16,7 +16,7 @@ export default {
     date: 'July 2016'
   }, {
     url_name: 'calculator',
-    title: 'Space Calculator',
+    title: 'SPACE CALCULATOR',
     description: 'A scientific calculator, but it\'s in space!',
     date: 'June 2016'
   }]

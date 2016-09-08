@@ -1,3 +1,6 @@
+@font-face {
+  font-family: 'Jeopardy';
+  src: url("assets/jeop.ttf") format("truetype"); }
 body {
   margin: 0;
   padding: 0;
@@ -8,16 +11,17 @@ body {
 .main-page {
   margin: 0 auto;
   width: 100%;
-  max-width: 1400px; }
+  max-width: 1200px; }
 
 .expo {
   transition: .5s;
   -webkit-filter: brightness(0.4);
   cursor: pointer;
+  position: relative;
   margin: 12px auto;
   width: 100%;
   height: 280px;
-  background-color: blue;
+  background-color: white;
   overflow: hidden; }
   .expo .parallel {
     width: 0px;
@@ -39,6 +43,10 @@ body {
       display: block;
       width: 230px;
       margin-left: 30px; }
+    .expo .parallel .date {
+      position: absolute;
+      bottom: 10px;
+      left: 50px; }
   .expo:hover {
     -webkit-filter: brightness(1); }
     .expo:hover .parallel {
@@ -81,6 +89,22 @@ body {
   100% {
     background-position: 3000px 0%; } }
 #jeopardy {
-  background: grey; }
+  background: #194119;
+  border-top: 1px solid #1cd42d;
+  border-bottom: 1px solid #1cd42d; }
+  #jeopardy .parallel {
+    background-color: #1cd42d; }
+    #jeopardy .parallel h3 {
+      width: 600px;
+      padding: 20px 0 10px 20px;
+      font-family: 'Jeopardy', sans-serif;
+      letter-spacing: 3px;
+      font-size: 56px;
+      color: #2CE83E;
+      text-shadow: 5px 5px 10px black; }
+  #jeopardy:hover {
+    background: url("assets/jeop.gif"); }
+    #jeopardy:hover .parallel {
+      box-shadow: 14px 0px rgba(28, 212, 45, 0.6), 28px 0px rgba(28, 212, 45, 0.3), 42px 0px rgba(28, 212, 45, 0.1); }
 
 /*# sourceMappingURL=main.css.map */

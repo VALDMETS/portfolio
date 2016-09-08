@@ -1,10 +1,10 @@
 import React from 'react';
-import {Route, Router, hashHistory} from 'react-router';
+import {Route, Router, browserHistory} from 'react-router';
 import FrontPage from './frontpage';
 
 const router = (
-  <Router history={hashHistory}>
-    <Route path='/*' component={FrontPage}/>
+  <Router history={browserHistory}>
+    <Route path='/main' component={FrontPage}/>
   </Router>
 );
 

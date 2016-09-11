@@ -10,21 +10,32 @@ export default React.createClass({
   render: function() {
     let expandedView;
     if(this.state.expand) {
-      expandedView = <p>wow wee!</p>
+      expandedView = (
+        <div className="description">
+          <p>Some stuff to say blah blah</p>
+        </div>
+      )
     }
     return (
-      <div className="expo" id={this.props.project.url_name} onClick={this.clickHandler}>
-        <div className="parallel">
-          <h3>{this.props.project.title}</h3>
-          <p>{this.props.project.description}</p>
-          <p className="date">{this.props.project.date}</p>
+      <section ref="project" className="project">
+        <div ref="expo" className="expo" id={this.props.project.url_name} onClick={this.clickHandler}>
+          <div className="parallel">
+            <h3>{this.props.project.title}</h3>
+            <p>{this.props.project.summary}</p>
+            <p className="date">{this.props.project.date}</p>
+          </div>
         </div>
         {expandedView}
-      </div>
+      </section>
     )
   },
   clickHandler: function () {
     console.log(this.props.project);
+    if(!this.state.expand) {
+      this.refs.project.className = "project expanded";
+    } else {
+      this.refs.project.className = "project";
+    }
     // browserHistory.push(this.props.project.url_name);
     this.setState({expand: !this.state.expand});
   }

@@ -12,6 +12,10 @@ body {
   width: 100%;
   max-width: 1200px; }
 
+.project {
+  transition: .5s;
+  height: 280px; }
+
 .expo {
   transition: .5s;
   -webkit-filter: brightness(0.4);
@@ -23,6 +27,7 @@ body {
   overflow: hidden;
   box-sizing: border-box; }
   .expo .parallel {
+    display: block;
     width: 0px;
     height: 280px;
     background-color: black;
@@ -61,6 +66,43 @@ body {
         transition: .3s;
         transition-delay: .2s;
         opacity: 1; }
+
+.project.expanded {
+  height: 560px; }
+  .project.expanded .description {
+    color: white;
+    font-family: 'Exo', sans-serif; }
+    .project.expanded .description h4 {
+      text-align: center;
+      font-size: 28px; }
+  .project.expanded .expo {
+    -webkit-filter: brightness(1);
+    overflow: visible; }
+    .project.expanded .expo .parallel {
+      width: 0px; }
+      .project.expanded .expo .parallel h3 {
+        opacity: 1;
+        -webkit-transform: skew(0deg);
+        -moz-transform: skew(0deg);
+        transform: skew(0deg); }
+      .project.expanded .expo .parallel p {
+        opacity: 0; }
+    .project.expanded .expo:hover .parallel {
+      -webkit-transform: skew(-30deg);
+      -moz-transform: skew(-30deg);
+      transform: skew(-30deg); }
+      .project.expanded .expo:hover .parallel h3 {
+        -webkit-transform: skew(30deg);
+        -moz-transform: skew(30deg);
+        transform: skew(30deg); }
+  .project.expanded #quarternote {
+    animation: Scroll 11s ease infinite alternate; }
+  .project.expanded #schlubbs {
+    animation: NorthScroll 9s ease infinite alternate; }
+  .project.expanded #jeopardy {
+    background: url("assets/jeop.gif"); }
+  .project.expanded #calculator {
+    animation: Stars 3.6s ease infinite alternate; }
 
 #quarternote {
   background: url("assets/quarter.png");
@@ -154,7 +196,6 @@ body {
     margin-left: -70px;
     line-height: 38px; }
   #calculator:hover {
-    -webkit-filter: brightness(1);
     animation: Stars 3.6s ease infinite alternate; }
 @keyframes Stars {
   0% {

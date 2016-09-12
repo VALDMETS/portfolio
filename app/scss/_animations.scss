@@ -163,3 +163,100 @@
     filter: brightness(2.1);
   }
 }
+
+@-webkit-keyframes Intro {
+  0%{
+    background-position:90% 0%;
+  }
+  90%{
+    bottom: 0;
+    border-bottom: none;
+    border-top: none;
+  }
+  100%{
+    background-position:11% 100%;
+    bottom: 92vh;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+}
+@-moz-keyframes Intro {
+  0%{
+    background-position:90% 0%;
+  }
+  90%{
+    bottom: 0;
+    border-bottom: none;
+    border-top: none;
+  }
+  100%{
+    background-position:11% 100%;
+    bottom: 92vh;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+}
+@keyframes Intro {
+  0%{
+    background-position:90% 0%;
+  }
+  90%{
+    bottom: 0;
+    border-bottom: none;
+    border-top: none;
+  }
+  100%{
+    background-position:11% 100%;
+    bottom: 92vh;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+  }
+}
+@-webkit-keyframes HeaderText {
+  0%{margin-top: 47vh;}
+  80%{
+    font-size: 6vh;
+    margin-top: 47vh;
+  }
+  100%{
+    font-size: 4vh;
+    margin-top: 2vh;
+  }
+}
+@-moz-keyframes HeaderText {
+  0%{margin-top: 47vh;}
+  80%{
+    font-size: 6vh;
+    margin-top: 47vh;
+  }
+  100%{
+    font-size: 4vh;
+    margin-top: 2vh;
+  }
+}
+@keyframes HeaderText {
+  0%{margin-top: 47vh;}
+  80%{
+    font-size: 6vh;
+    margin-top: 47vh;
+  }
+  100%{
+    font-size: 4vh;
+    margin-top: 2vh;
+  }
+}
+@-webkit-keyframes FadeIn {
+  0%{opacity: 0}
+  80%{opacity: 0}
+  100%{font-size: 3vh; opacity: 1;}
+}
+@-moz-keyframes FadeIn {
+  0%{opacity: 0}
+  80%{opacity: 0}
+  100%{font-size: 3vh; opacity: 1;}
+}
+@keyframes FadeIn {
+  0%{opacity: 0}
+  80%{opacity: 0}
+  100%{font-size: 3vh; opacity: 1;}
+}

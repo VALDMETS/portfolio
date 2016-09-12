@@ -16,6 +16,60 @@ body {
   width: 100%;
   max-width: 1200px;
 }
+header {
+  font-family: 'Josefin Slab', sans-serif;
+  color: white;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(219deg, #000000, #383838, #000000);
+  background-size: 800% 800%;
+
+  -webkit-animation: Intro 3s ease forwards;
+  -moz-animation: Intro 3s ease forwards;
+  animation: Intro 3s ease forwards;
+
+  }
+  h5 {
+    font-size: 6vh;
+    text-align: center;
+    margin-top: 47vh;
+
+    -webkit-animation: HeaderText 3s ease forwards;
+    -moz-animation: HeaderText 3s ease forwards;
+    animation: HeaderText 3s ease forwards;
+
+  }
+  a {
+    opacity: 0;
+    color: white;
+    font-size: 0;
+    text-decoration: none;
+    margin: 0 3vh;
+
+    -webkit-animation: FadeIn 4s ease forwards;
+    -moz-animation: FadeIn 4s ease forwards;
+    animation: FadeIn 4s ease forwards;
+
+  }
+  .left {
+    position: absolute;
+    left: 20px;
+    top: 3vh
+  }
+  .right {
+    position: absolute;
+    right: 20px;
+    top: 3vh;
+  }
+.project-cont {
+  display: block;
+  width: 100%;
+  margin: 20vh 0;
+}
 .project {
   transition: .5s;
   height: 280px;
@@ -86,7 +140,7 @@ body {
   }
 }
 .project.expanded {
-  height: 560px;
+  height: 580px;
   .description {
     display: block;
     max-width: 600px;
@@ -100,6 +154,10 @@ body {
       padding: 0 6px 0 30px;
     }
     a {
+      opacity: 1;
+      animation: none;
+      text-decoration: underline;
+      margin: 0;
       font-size: 26px;
       color: #34A8C4;
     }
@@ -107,6 +165,7 @@ body {
       font-size: 36px;
     }
     p {
+      font-size: 18px;
       line-height: 19px;
       margin: 20px;
       a {

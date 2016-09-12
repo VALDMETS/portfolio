@@ -10,8 +10,19 @@ export default React.createClass({
     return (
       <section className="main-page">
         <header>
+          <div className="left">
+            <a href="assets/BValdmetsResume.pdf" download>Résumé</a>
+            <a href="mailto:benvaldmets@gmail.com">Contact</a>
+          </div>
+          <h5>Ben Valdmets</h5>
+          <div className="right">
+            <a href="https://github.com/VALDMETS">GitHub</a>
+            <a href="https://linkedin.com/in/valdmets">LinkedIn</a>
+          </div>
   			</header>
-  			{portfolioItems}
+        <div className="project-cont">
+  			  {portfolioItems}
+        </div>
       </section>
     )
   }

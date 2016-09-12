@@ -225,16 +225,26 @@ body {
 .project.expanded {
   height: 560px; }
   .project.expanded .description {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
     color: white;
     font-family: 'Josefin Slab', sans-serif; }
     .project.expanded .description h4 {
       display: inline-block;
       font-size: 32px;
       margin: 10px;
-      padding: 0 6px 0 80px; }
+      padding: 0 6px 0 30px; }
     .project.expanded .description a {
       font-size: 26px;
       color: #34A8C4; }
+    .project.expanded .description span {
+      font-size: 36px; }
+    .project.expanded .description p {
+      line-height: 19px;
+      margin: 20px; }
+      .project.expanded .description p a {
+        font-size: 18px; }
   .project.expanded .expo {
     -webkit-filter: brightness(1);
     filter: brightness(1); }

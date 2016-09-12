@@ -14,7 +14,9 @@ export default React.createClass({
         <div className="description">
           <h4>{this.props.project.title} -</h4>
           <a href={this.props.project.url}>Live Site</a>
-          <p>Some stuff to say blah blah</p>
+          <span> - </span>
+          <a href={this.props.project.github}>GitHub</a>
+          {this.props.project.description}
         </div>
       )
     }
@@ -32,13 +34,12 @@ export default React.createClass({
     )
   },
   clickHandler: function () {
-    console.log(this.props.project);
+    // location.hash = this.props.project.url_name;
     if(!this.state.expand) {
       this.refs.project.className = "project expanded";
     } else {
       this.refs.project.className = "project";
     }
-    // browserHistory.push(this.props.project.url_name);
     this.setState({expand: !this.state.expand});
   }
 });

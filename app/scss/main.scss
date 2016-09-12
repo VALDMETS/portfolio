@@ -88,17 +88,30 @@ body {
 .project.expanded {
   height: 560px;
   .description {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
     color: white;
     font-family: 'Josefin Slab', sans-serif;
     h4 {
       display: inline-block;
       font-size: 32px;
       margin: 10px;
-      padding: 0 6px 0 80px;
+      padding: 0 6px 0 30px;
     }
     a {
       font-size: 26px;
       color: #34A8C4;
+    }
+    span {
+      font-size: 36px;
+    }
+    p {
+      line-height: 19px;
+      margin: 20px;
+      a {
+        font-size: 18px;
+      }
     }
   }
   .expo {

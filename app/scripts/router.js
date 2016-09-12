@@ -4,7 +4,7 @@ import FrontPage from './frontpage';
 
 const router = (
   <Router history={browserHistory}>
-    <Route path='/main' component={FrontPage}/>
+    <Route path='/*' component={FrontPage}/>
   </Router>
 );
 

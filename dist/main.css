@@ -4,8 +4,8 @@
 body {
   margin: 0;
   padding: 0;
-  background: black;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  background: black; }
 
 .main-page {
   margin: 0 auto;
@@ -19,6 +19,7 @@ body {
 .expo {
   transition: .5s;
   -webkit-filter: brightness(0.4);
+  filter: brightness(0.4);
   cursor: pointer;
   position: relative;
   margin: 12px auto;
@@ -55,7 +56,8 @@ body {
       bottom: 10px;
       left: 50px; }
   .expo:hover {
-    -webkit-filter: brightness(1); }
+    -webkit-filter: brightness(1);
+    filter: brightness(1); }
     .expo:hover .parallel {
       width: 250px;
       -webkit-transform: skew(-30deg);
@@ -77,24 +79,13 @@ body {
       font-size: 28px; }
   .project.expanded .expo {
     -webkit-filter: brightness(1);
-    overflow: visible; }
+    filter: brightness(1); }
     .project.expanded .expo .parallel {
       width: 0px; }
-      .project.expanded .expo .parallel h3 {
-        opacity: 1;
-        -webkit-transform: skew(0deg);
-        -moz-transform: skew(0deg);
-        transform: skew(0deg); }
-      .project.expanded .expo .parallel p {
+      .project.expanded .expo .parallel h3, .project.expanded .expo .parallel p {
         opacity: 0; }
     .project.expanded .expo:hover .parallel {
-      -webkit-transform: skew(-30deg);
-      -moz-transform: skew(-30deg);
-      transform: skew(-30deg); }
-      .project.expanded .expo:hover .parallel h3 {
-        -webkit-transform: skew(30deg);
-        -moz-transform: skew(30deg);
-        transform: skew(30deg); }
+      width: 0px; }
   .project.expanded #quarternote {
     animation: Scroll 11s ease infinite alternate; }
   .project.expanded #schlubbs {
@@ -199,16 +190,22 @@ body {
     animation: Stars 3.6s ease infinite alternate; }
 @keyframes Stars {
   0% {
-    -webkit-filter: brightness(0.8); }
+    -webkit-filter: brightness(0.8);
+    filter: brightness(0.8); }
   30% {
-    -webkit-filter: brightness(1); }
+    -webkit-filter: brightness(1);
+    filter: brightness(1); }
   80% {
-    -webkit-filter: brightness(1.3); }
+    -webkit-filter: brightness(1.3);
+    filter: brightness(1.3); }
   90% {
-    -webkit-filter: brightness(3.2); }
+    -webkit-filter: brightness(3.2);
+    filter: brightness(3.2); }
   97% {
-    -webkit-filter: brightness(3.6); }
+    -webkit-filter: brightness(3.6);
+    filter: brightness(3.6); }
   100% {
-    -webkit-filter: brightness(2.1); } }
+    -webkit-filter: brightness(2.1);
+    filter: brightness(2.1); } }
 
 /*# sourceMappingURL=main.css.map */

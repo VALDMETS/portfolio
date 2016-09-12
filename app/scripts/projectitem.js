@@ -12,6 +12,8 @@ export default React.createClass({
     if(this.state.expand) {
       expandedView = (
         <div className="description">
+          <h4>{this.props.project.title} -</h4>
+          <a href={this.props.project.url}>Live Site</a>
           <p>Some stuff to say blah blah</p>
         </div>
       )
